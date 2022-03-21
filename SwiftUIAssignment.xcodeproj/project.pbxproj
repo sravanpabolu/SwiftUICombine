@@ -19,6 +19,7 @@
 		82DCA22927E887AD00DD5D1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82DCA22B27E887B300DD5D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82DCA22E27E887B300DD5D1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		82DCA23527E887F700DD5D1F /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		82DCA21B27E887AD00DD5D1F = {
 			isa = PBXGroup;
 			children = (
+				82DCA23527E887F700DD5D1F /* ReadMe.md */,
 				82DCA22627E887AD00DD5D1F /* SwiftUIAssignment */,
 				82DCA22527E887AD00DD5D1F /* Products */,
 			);
