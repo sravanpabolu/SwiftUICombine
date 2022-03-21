@@ -9,4 +9,6 @@ import Foundation
 
 struct Constants {
     static let apiUrl = "https://jsonplaceholder.typicode.com/photos"
+    
+    static let noImageIcon = "no-image-icon"
 }
