@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct AlbumListView: View {
-    let albumViewModel = AlbumViewModel()
+    @StateObject var albumViewModel = AlbumViewModel()
     
     var body: some View {
         List(albumViewModel.albums) { anAlbum in
             AlbumRowView(album: anAlbum)
         }
         .task {
-            albumViewModel.getAlbums()
+            await albumViewModel.getAlbums()
         }
     }
 }
