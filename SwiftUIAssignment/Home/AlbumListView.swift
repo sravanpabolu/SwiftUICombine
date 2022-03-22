@@ -18,15 +18,10 @@ struct AlbumListView: View {
             .task {
                 await albumViewModel.getAlbums()
             }
-//        .listStyle(SidebarListStyle())
         } else {
             VStack {
                 Text("Please wait... fetching Albums...")
-//                Button("Reload") {
-//                    Task {
-//                        await albumViewModel.getAlbums()
-//                    }
-//                }
+                ProgressView()
             }
         }
     }
