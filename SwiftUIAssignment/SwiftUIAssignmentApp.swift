@@ -13,7 +13,8 @@ struct SwiftUIAssignmentApp: App {
         WindowGroup {
 //            ContentView()
 //            AlbumListView()
-            LoginView()
+//            LoginView()
+            UserRegistrationView()
         }
     }
 }

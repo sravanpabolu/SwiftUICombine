@@ -41,7 +41,7 @@ struct LoginView: View {
     
     var emailTextField: some View {
         TextField(
-            Constants.txt_email,
+            Constants.txt_username,
             text: $emailText
 //            onEditingChanged: { isTextChanged in
 //                if isTextChanged {
