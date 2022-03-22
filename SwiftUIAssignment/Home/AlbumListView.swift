@@ -18,6 +18,7 @@ struct AlbumListView: View {
             .task {
                 await albumViewModel.getAlbums()
             }
+//            .animation(.easeOut, value: 200)
         } else {
             VStack {
                 Text("Please wait... fetching Albums...")
