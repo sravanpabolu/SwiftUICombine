@@ -17,6 +17,8 @@
 		82DCA24127E8900400DD5D1F /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24027E8900400DD5D1F /* AlbumListView.swift */; };
 		82DCA24327E8900B00DD5D1F /* AlbumRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24227E8900B00DD5D1F /* AlbumRowView.swift */; };
 		82DCA24827E8BB0000DD5D1F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24727E8BB0000DD5D1F /* NetworkManager.swift */; };
+		82DCA24A27EA025F00DD5D1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24927EA025F00DD5D1F /* LoginView.swift */; };
+		82DCA24C27EA0AA200DD5D1F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24B27EA0AA200DD5D1F /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		82DCA24027E8900400DD5D1F /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
 		82DCA24227E8900B00DD5D1F /* AlbumRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRowView.swift; sourceTree = "<group>"; };
 		82DCA24727E8BB0000DD5D1F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		82DCA24927EA025F00DD5D1F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		82DCA24B27EA0AA200DD5D1F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 		82DCA23627E88A1600DD5D1F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				82DCA24927EA025F00DD5D1F /* LoginView.swift */,
+				82DCA24B27EA0AA200DD5D1F /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -200,10 +206,12 @@
 				82DCA22A27E887AD00DD5D1F /* ContentView.swift in Sources */,
 				82DCA22827E887AD00DD5D1F /* SwiftUIAssignmentApp.swift in Sources */,
 				82DCA24127E8900400DD5D1F /* AlbumListView.swift in Sources */,
+				82DCA24A27EA025F00DD5D1F /* LoginView.swift in Sources */,
 				82DCA24327E8900B00DD5D1F /* AlbumRowView.swift in Sources */,
 				82DCA24827E8BB0000DD5D1F /* NetworkManager.swift in Sources */,
 				82DCA23B27E88D9A00DD5D1F /* Constants.swift in Sources */,
 				82DCA23F27E88FDF00DD5D1F /* AlbumViewModel.swift in Sources */,
+				82DCA24C27EA0AA200DD5D1F /* LoginViewModel.swift in Sources */,
 				82DCA23D27E88F6B00DD5D1F /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
