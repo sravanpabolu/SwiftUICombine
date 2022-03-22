@@ -19,6 +19,7 @@
 		82DCA24827E8BB0000DD5D1F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24727E8BB0000DD5D1F /* NetworkManager.swift */; };
 		82DCA24A27EA025F00DD5D1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24927EA025F00DD5D1F /* LoginView.swift */; };
 		82DCA24C27EA0AA200DD5D1F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24B27EA0AA200DD5D1F /* LoginViewModel.swift */; };
+		82DCA24E27EA3C1D00DD5D1F /* UserRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24D27EA3C1D00DD5D1F /* UserRegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		82DCA24727E8BB0000DD5D1F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		82DCA24927EA025F00DD5D1F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		82DCA24B27EA0AA200DD5D1F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		82DCA24D27EA3C1D00DD5D1F /* UserRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		82DCA23727E88A2500DD5D1F /* UserRegistration */ = {
 			isa = PBXGroup;
 			children = (
+				82DCA24D27EA3C1D00DD5D1F /* UserRegistrationView.swift */,
 			);
 			path = UserRegistration;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				82DCA22A27E887AD00DD5D1F /* ContentView.swift in Sources */,
 				82DCA22827E887AD00DD5D1F /* SwiftUIAssignmentApp.swift in Sources */,
 				82DCA24127E8900400DD5D1F /* AlbumListView.swift in Sources */,
+				82DCA24E27EA3C1D00DD5D1F /* UserRegistrationView.swift in Sources */,
 				82DCA24A27EA025F00DD5D1F /* LoginView.swift in Sources */,
 				82DCA24327E8900B00DD5D1F /* AlbumRowView.swift in Sources */,
 				82DCA24827E8BB0000DD5D1F /* NetworkManager.swift in Sources */,

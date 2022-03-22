@@ -16,22 +16,27 @@ struct LoginView: View {
     @State private var isEmailValid: Bool = false
     @State private var isPasswordValid: Bool = false
     
+    @State private var isRegisterActive: Bool = false
+    
 //    @FocusState private var emailFieldIsFocused: Bool = false
 
     var body: some View {
-        VStack {
-            emailTextField
-            passwordTextField
-            
-            HStack {
-                Spacer()
-                loginButton
-                Spacer()
-                registerButton
-                Spacer()
+        NavigationView {
+            VStack {
+                emailTextField
+                passwordTextField
+                
+                HStack {
+                    Spacer()
+                    loginButton
+                    Spacer()
+                    registerButton
+                    Spacer()
+                }
             }
+            .padding()
         }
-        .padding()
+        .navigationTitle(Constants.title_login)
     }
     
     var emailTextField: some View {
@@ -91,11 +96,24 @@ struct LoginView: View {
     }
     
     var registerButton: some View {
-        Button(Constants.btn_register) {
-            print("Register")
+        NavigationLink(isActive: $isRegisterActive) {
+            UserRegistrationView()
+        } label: {
+            Text(Constants.btn_register)
+                .padding()
+                .border(.secondary)
         }
-        .padding()
-        .border(.secondary)
+
+        
+//        (destination: UserRegistrationView(),
+//                       isActive: $isRegisterActive,
+//                       label: {
+//            Text(Constants.title_register)
+//        }) {
+//            Text(Constants.btn_register)
+//                .padding()
+//                .border(.secondary)
+//        }
     }
     
     private func validateTextFields() {

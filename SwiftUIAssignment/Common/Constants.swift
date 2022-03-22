@@ -12,11 +12,16 @@ struct Constants {
     
     static let noImageIcon = "no-image-icon"
     
+    static let title_login = "Login"
+    static let title_register = "Register"
+    static let title_Albums   = "Albums List"
+    
     static let txt_email    = "User name (email address)"
     static let txt_password = "Password"
     
     static let btn_register = "Register"
     static let btn_login    = "Login"
+    
     
 }
 
