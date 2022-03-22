@@ -12,15 +12,34 @@ struct AlbumRowView: View {
     
     var body: some View {
         let title = album.title ?? "No Title"
-        
-        HStack(alignment: VerticalAlignment.center, spacing: 10) {
-            Image(Constants.noImageIcon, bundle: .main)
-                .resizable()
-                .frame(width: 40, height: 40, alignment: .center)
-            Text(title)
-            Spacer()
+        if let thumbImageUrl = URL(string: album.thumbnailURL ?? "") {
+            HStack(alignment: VerticalAlignment.center, spacing: 10) {
+                AsyncImage(
+                    url: thumbImageUrl,
+                    content: { anImage in
+                        anImage
+                            .resizable()
+                            .frame(width: 40, height: 40, alignment: .center)
+                    },
+                    placeholder: {
+                        ProgressView()
+                            .foregroundColor(.red)
+                    }
+                )
+                
+                Text(title)
+                Spacer()
+            }
+            .padding()
+        } else {
+            HStack(alignment: VerticalAlignment.center, spacing: 10) {
+                Image(Constants.noImageIcon, bundle: .main)
+                    .resizable()
+                    .frame(width: 40, height: 40, alignment: .center)
+                Text(title)
+                Spacer()
+            }
         }
-        .padding()
     }
 }
 

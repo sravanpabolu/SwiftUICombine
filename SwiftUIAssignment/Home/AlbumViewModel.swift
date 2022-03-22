@@ -9,9 +9,15 @@ import Foundation
 import Combine
 
 class AlbumViewModel: ObservableObject {
-    @Published var albums: Albums = [Album(albumID: 0, id: 0, title: "Album ZERO", url: "", thumbnailURL: "")]
+    @Published var albums: Albums? // = [Album(albumID: 0, id: 0, title: "Album ZERO", url: "", thumbnailURL: "")]
     
     private var cancellable = Set<AnyCancellable>()
+    
+    init() {
+        Task { [weak self] in
+            await self?.getAlbums()
+        }
+    }
     
     func getAlbums() async {
         do {

@@ -11,11 +11,23 @@ struct AlbumListView: View {
     @StateObject var albumViewModel = AlbumViewModel()
     
     var body: some View {
-        List(albumViewModel.albums) { anAlbum in
-            AlbumRowView(album: anAlbum)
-        }
-        .task {
-            await albumViewModel.getAlbums()
+        if let albums = albumViewModel.albums {
+            List(albums) { anAlbum in
+                AlbumRowView(album: anAlbum)
+            }
+            .task {
+                await albumViewModel.getAlbums()
+            }
+//        .listStyle(SidebarListStyle())
+        } else {
+            VStack {
+                Text("Please wait... fetching Albums...")
+//                Button("Reload") {
+//                    Task {
+//                        await albumViewModel.getAlbums()
+//                    }
+//                }
+            }
         }
     }
 }

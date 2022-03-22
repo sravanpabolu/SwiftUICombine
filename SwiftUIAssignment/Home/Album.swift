@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Albums = [Album]
+
 struct Album: Codable, Identifiable {
     let albumID, id: Int?
     let title: String?
@@ -18,5 +20,3 @@ struct Album: Codable, Identifiable {
         case thumbnailURL = "thumbnailUrl"
     }
 }
-
-typealias Albums = [Album]
