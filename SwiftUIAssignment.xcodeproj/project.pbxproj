@@ -20,6 +20,10 @@
 		82DCA24A27EA025F00DD5D1F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24927EA025F00DD5D1F /* LoginView.swift */; };
 		82DCA24C27EA0AA200DD5D1F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24B27EA0AA200DD5D1F /* LoginViewModel.swift */; };
 		82DCA24E27EA3C1D00DD5D1F /* UserRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24D27EA3C1D00DD5D1F /* UserRegistrationView.swift */; };
+		82DCA25027EA3E9500DD5D1F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA24F27EA3E9500DD5D1F /* Utils.swift */; };
+		82DCA25227EB52D900DD5D1F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA25127EB52D900DD5D1F /* CustomTextField.swift */; };
+		82DCA25427EB540C00DD5D1F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA25327EB540C00DD5D1F /* CustomButton.swift */; };
+		82DCA25627EB54E300DD5D1F /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA25527EB54E300DD5D1F /* UserRegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		82DCA24927EA025F00DD5D1F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		82DCA24B27EA0AA200DD5D1F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		82DCA24D27EA3C1D00DD5D1F /* UserRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationView.swift; sourceTree = "<group>"; };
+		82DCA24F27EA3E9500DD5D1F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		82DCA25127EB52D900DD5D1F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		82DCA25327EB540C00DD5D1F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		82DCA25527EB54E300DD5D1F /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +79,6 @@
 		82DCA22627E887AD00DD5D1F /* SwiftUIAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				82DCA24427E8937E00DD5D1F /* Misc */,
 				82DCA23927E88D6E00DD5D1F /* Common */,
 				82DCA23827E88A2E00DD5D1F /* Home */,
 				82DCA23727E88A2500DD5D1F /* UserRegistration */,
@@ -105,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				82DCA24D27EA3C1D00DD5D1F /* UserRegistrationView.swift */,
+				82DCA25527EB54E300DD5D1F /* UserRegistrationViewModel.swift */,
 			);
 			path = UserRegistration;
 			sourceTree = "<group>";
@@ -123,17 +131,13 @@
 		82DCA23927E88D6E00DD5D1F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				82DCA24F27EA3E9500DD5D1F /* Utils.swift */,
 				82DCA23A27E88D9A00DD5D1F /* Constants.swift */,
 				82DCA24727E8BB0000DD5D1F /* NetworkManager.swift */,
+				82DCA25127EB52D900DD5D1F /* CustomTextField.swift */,
+				82DCA25327EB540C00DD5D1F /* CustomButton.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		82DCA24427E8937E00DD5D1F /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DCA25627EB54E300DD5D1F /* UserRegistrationViewModel.swift in Sources */,
+				82DCA25227EB52D900DD5D1F /* CustomTextField.swift in Sources */,
 				82DCA22A27E887AD00DD5D1F /* ContentView.swift in Sources */,
 				82DCA22827E887AD00DD5D1F /* SwiftUIAssignmentApp.swift in Sources */,
 				82DCA24127E8900400DD5D1F /* AlbumListView.swift in Sources */,
+				82DCA25427EB540C00DD5D1F /* CustomButton.swift in Sources */,
 				82DCA24E27EA3C1D00DD5D1F /* UserRegistrationView.swift in Sources */,
 				82DCA24A27EA025F00DD5D1F /* LoginView.swift in Sources */,
 				82DCA24327E8900B00DD5D1F /* AlbumRowView.swift in Sources */,
@@ -217,6 +224,7 @@
 				82DCA23F27E88FDF00DD5D1F /* AlbumViewModel.swift in Sources */,
 				82DCA24C27EA0AA200DD5D1F /* LoginViewModel.swift in Sources */,
 				82DCA23D27E88F6B00DD5D1F /* Album.swift in Sources */,
+				82DCA25027EA3E9500DD5D1F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
