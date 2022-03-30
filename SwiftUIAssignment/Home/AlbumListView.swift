@@ -15,10 +15,6 @@ struct AlbumListView: View {
             List(albums) { anAlbum in
                 AlbumRowView(album: anAlbum)
             }
-            .task {
-                await albumViewModel.getAlbums()
-            }
-//            .animation(.easeOut, value: 200)
         } else {
             VStack {
                 Text("Please wait... fetching Albums...")
