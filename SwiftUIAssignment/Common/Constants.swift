@@ -37,11 +37,19 @@ struct Constants {
     static let err_phoneno  = "Enter valid phone number"
     static let err_dob      = "Age must be more than 21 years"
     static let err_intro    = "Enter some introduction"
+    
+    static let alert_err_msg = "Please enter valid data"
+    static let alert_success = "Registration Success"
+    static let alert_ok     = "OK"
 }
 
 enum NetworkError: Error {
     case badUrl, badResponse, badParsing
     case custom(description: String)
+}
+
+enum LoginError: Error {
+    case noUser, passwordError
 }
 
 enum Gender: String, CaseIterable {

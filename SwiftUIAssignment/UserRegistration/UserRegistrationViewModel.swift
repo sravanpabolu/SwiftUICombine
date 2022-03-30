@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class UserRegistrationViewModel: ObservableObject {
     @Published var name: String = ""
@@ -16,8 +17,13 @@ class UserRegistrationViewModel: ObservableObject {
     @Published var country: Country = .india
     @Published var password: String = ""
     @Published var introduction: String = "Add your bio here"
+    @Published var showingAlert = false
 //    var dob: Int = Calendar.current.dateComponents([.year], from: Date()).year!
-
+    
+    var alertMsg: String {
+        isRegistrationValid ? Constants.alert_success : Constants.alert_err_msg
+    }
+    
     var emailPrompt: String {
         isEmailValid ? "" : Constants.err_email
     }
@@ -35,9 +41,7 @@ class UserRegistrationViewModel: ObservableObject {
 //    }
     
     private var isEmailValid: Bool {
-        let emailTest = NSPredicate(format: "SELF MATCHES %@",
-                                    "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
-        return emailTest.evaluate(with: email)
+        Utils.isEmailValid(email: email)
     }
     
     private var isNameValid: Bool {
@@ -49,9 +53,11 @@ class UserRegistrationViewModel: ObservableObject {
 //    }
     
     private var isPhoneNumberValid: Bool {
-        let test = NSPredicate(format: "SELF MATCHES %@",
-                                    "^((\\+)?(\\d{2}[-])?(\\d{10}){1})?(\\d{11}){0,1}?$")
-        return test.evaluate(with: phone)
+//        let test = NSPredicate(format: "SELF MATCHES %@",
+//                                    "^((\\+)?(\\d{2}[-])?(\\d{10}){1})?(\\d{11}){0,1}?$")
+//        return test.evaluate(with: phone)
+        
+        phone.isEmpty ? false : true
     }
     
     private var isRegistrationValid: Bool {
@@ -61,10 +67,12 @@ class UserRegistrationViewModel: ObservableObject {
     
     func submitForm() {
         if isRegistrationValid {
-           print("VALID REGISTRATION")
+            print("VALID REGISTRATION")
+            StorageManager.shared.saveData(for: email, value: password)
         } else {
             print("INVALID DATA")
         }
+        showingAlert = true
     }
     
     func resetFields() {

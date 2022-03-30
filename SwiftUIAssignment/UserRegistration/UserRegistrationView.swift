@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Combine
 
 struct UserRegistrationView: View {
     @StateObject var userRegistrationViewModel = UserRegistrationViewModel()
@@ -29,6 +29,11 @@ struct UserRegistrationView: View {
                     Spacer()
                     submitButton
                     Spacer()
+                }
+            }
+            .alert(userRegistrationViewModel.alertMsg, isPresented: $userRegistrationViewModel.showingAlert) {
+                Button(Constants.alert_ok, role: .cancel) {
+                    
                 }
             }
         }
