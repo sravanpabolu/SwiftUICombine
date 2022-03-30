@@ -11,10 +11,7 @@ import SwiftUI
 struct SwiftUIAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//            AlbumListView()
-//            LoginView()
-            UserRegistrationView()
+            LoginView()
         }
     }
 }
