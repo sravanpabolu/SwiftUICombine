@@ -9,18 +9,9 @@ import Foundation
 
 struct Utils {
     
-    static func validate(text: String) -> Bool {
-        if text.isEmpty, text.count > 2 {
-            return false
-        }
-        return true
-    }
-    
-    static func validate(email: String) -> Bool {
-        return true
-    }
-    
-    static private func validateEmpty(text: String) -> Bool {
-        !text.isEmpty ? true : false
+    static func isEmailValid(email: String) -> Bool {
+        let emailTest = NSPredicate(format: "SELF MATCHES %@",
+                                    "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
+        return emailTest.evaluate(with: email)
     }
 }
