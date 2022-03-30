@@ -8,17 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    private var loginViewModel = LoginViewModel()
-    
-    @State private var emailText: String = ""
-    @State private var passwordText: String = ""
-    
-    @State private var isEmailValid: Bool = false
-    @State private var isPasswordValid: Bool = false
-    
+    @StateObject private var loginViewModel = LoginViewModel()
     @State private var isRegisterActive: Bool = false
-    
-//    @FocusState private var emailFieldIsFocused: Bool = false
 
     var body: some View {
         NavigationView {
@@ -37,60 +28,35 @@ struct LoginView: View {
             .padding()
         }
         .navigationTitle(Constants.title_login)
-    }
-    
-    var emailTextField: some View {
-        TextField(
-            Constants.txt_username,
-            text: $emailText
-//            onEditingChanged: { isTextChanged in
-//                if isTextChanged {
-//                    self.isEmailValid = loginViewModel.validateEmail(email: self.emailText)
-//                }
-//            }
-        )
-//            .focused($emailFieldIsFocused)
-            .onSubmit {
-                print("Username ON SUBMIT")
-                validateTextFields()
+        .alert(loginViewModel.alertMsg,
+               isPresented: $loginViewModel.showingAlert) {
+            Button(Constants.alert_ok, role: .cancel) {
+                
             }
-            .textInputAutocapitalization(.never)
-            .disableAutocorrection(true)
-            .border(.secondary)
-//            .padding()
-//            .background(.teal)
+        }
+    }
+    var emailTextField: some View {
+        CustomTextField(name: Constants.txt_email,
+                        bindingField: $loginViewModel.email,
+                        keyboardType: .emailAddress,
+                        errorText: "")
     }
     
     var passwordTextField: some View {
-        SecureField(Constants.txt_password,
-                    text: $passwordText)
-            .onSubmit {
-                print("Password ON SUBMIT")
-                validateTextFields()
-            }
-            .border(.secondary)
-//            .padding()
+        CustomTextField(name: Constants.txt_password, bindingField: $loginViewModel.password, isSecure: true)
     }
     
     var loginButton: some View {
-        Button(Constants.btn_login) {
-            print("Login ON SUBMIT")
-            
-            validateTextFields()
-            
-            // TODO: Should use error handling
-            if self.isEmailValid, self.isPasswordValid {
-                let isValidUser = loginViewModel.validateUser(username: emailText, password: passwordText)
-                
-                if isValidUser {
-                    print("isValidUser")
-                } else {
-                    print("isNOTValidUser")
-                }
-            } else {
-                print("Email or password not valid")
-            }
+        Button(action: {
+            loginViewModel.submitLogin()
+        }) {
+            Text(Constants.btn_login)
+                .font(.system(size: 12, weight: .semibold))
+                .frame(alignment: .center)
         }
+        .background(NavigationLink(destination: AlbumListView(), isActive: $loginViewModel.isLoginSuccess) {
+            Text("")
+        })
         .padding()
         .border(.secondary)
     }
@@ -103,24 +69,6 @@ struct LoginView: View {
                 .padding()
                 .border(.secondary)
         }
-
-        
-//        (destination: UserRegistrationView(),
-//                       isActive: $isRegisterActive,
-//                       label: {
-//            Text(Constants.title_register)
-//        }) {
-//            Text(Constants.btn_register)
-//                .padding()
-//                .border(.secondary)
-//        }
-    }
-    
-    private func validateTextFields() {
-        print("validateTextFields")
-        
-        isEmailValid = self.loginViewModel.validateEmail(email: self.emailText)
-        isPasswordValid = loginViewModel.validatePassword(text: self.passwordText)
     }
 }
 

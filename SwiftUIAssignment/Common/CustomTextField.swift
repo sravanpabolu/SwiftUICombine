@@ -24,7 +24,6 @@ struct CustomTextField: View {
                 Spacer(minLength: leadingSpace)
                 if !isSecure {
                     TextField(name, text: $bindingField)
-                        
                         .padding(paddingValue)
                         .keyboardType(keyboardType)
                         .overlay(RoundedRectangle(cornerRadius: cornerRadius).stroke(.gray, lineWidth: 1))
