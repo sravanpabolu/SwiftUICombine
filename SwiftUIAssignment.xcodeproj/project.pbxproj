@@ -24,6 +24,7 @@
 		82DCA25227EB52D900DD5D1F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA25127EB52D900DD5D1F /* CustomTextField.swift */; };
 		82DCA25427EB540C00DD5D1F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA25327EB540C00DD5D1F /* CustomButton.swift */; };
 		82DCA25627EB54E300DD5D1F /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA25527EB54E300DD5D1F /* UserRegistrationViewModel.swift */; };
+		82DCA25827EC47FE00DD5D1F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA25727EC47FE00DD5D1F /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		82DCA25127EB52D900DD5D1F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		82DCA25327EB540C00DD5D1F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		82DCA25527EB54E300DD5D1F /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
+		82DCA25727EC47FE00DD5D1F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				82DCA24727E8BB0000DD5D1F /* NetworkManager.swift */,
 				82DCA25127EB52D900DD5D1F /* CustomTextField.swift */,
 				82DCA25327EB540C00DD5D1F /* CustomButton.swift */,
+				82DCA25727EC47FE00DD5D1F /* StorageManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				82DCA24C27EA0AA200DD5D1F /* LoginViewModel.swift in Sources */,
 				82DCA23D27E88F6B00DD5D1F /* Album.swift in Sources */,
 				82DCA25027EA3E9500DD5D1F /* Utils.swift in Sources */,
+				82DCA25827EC47FE00DD5D1F /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
